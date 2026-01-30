@@ -1,8 +1,10 @@
 {
     "name": "curator",
-    "description": "An obsidian plugin to accelerate organizing and managing notes",
-    "version": "0.0.1",
+    "description": "Create, edit, organize and manage Obsidian vault files including Markdown, Bases, Canvas and Excalidraw. Use when working with an Obsidian vault.",
     "author": {
-        "name": "Elon Tang"
-    }
+        "name": "Elon Tang",
+        "url": "https://www.blackcater.dev"
+    },
+    "version": "0.0.1",
+    "homepage": "https://github.com/blackcater/curator"
 }

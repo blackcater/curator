@@ -1,0 +1,20 @@
+{
+    "name": "claude-code-curator",
+    "owner": {
+        "name": "Elon Tang",
+        "url": "https://www.blackcater.dev"
+    },
+    "plugins": [
+        {
+            "name": "curator",
+            "description": "Create, edit, organize and manage Obsidian vault files including Markdown, Bases, Canvas and Excalidraw. Use when working with an Obsidian vault.",
+            "author": {
+                "name": "Elon Tang",
+                "url": "https://www.blackcater.dev"
+            },
+            "source": "./",
+            "version": "0.0.1",
+            "homepage": "https://github.com/blackcater/curator"
+        }
+    ]
+}
