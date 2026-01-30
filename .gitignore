@@ -1,0 +1,15 @@
+# os
+.DS_Store
+
+# editor
+.idea/
+.vscode/
+
+# claude
+sessions/
+
+# claudian
+claudian-settings.json
+
+# others
+temp/

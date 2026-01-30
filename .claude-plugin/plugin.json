@@ -1,0 +1,8 @@
+{
+    "name": "curator",
+    "description": "An obsidian plugin to accelerate organizing and managing notes",
+    "version": "0.0.1",
+    "author": {
+        "name": "Elon Tang"
+    }
+}
