@@ -28,13 +28,6 @@ golangConcurrency.md
 System Design Interview.md
 ```
 
-**Format**: `[topic]-MOC.md` or `[topic]-[scenario]-MOC.md`
-
-Examples:
-- `kubernetes.md`
-- `kubernetes-learning.md`
-- `react-interview-prep.md`
-
 ---
 
 ## Frontmatter
@@ -47,7 +40,6 @@ title: [Title]
 tags:
   - moc
   - [topic]
-  - [scenario]
 type: moc
 created: [YYYY-MM-DD]
 updated: [YYYY-MM-DD]
@@ -55,16 +47,7 @@ updated: [YYYY-MM-DD]
 
 # [Title]
 
-> [One-line description]
-
-## 概述
-```
-
-**Minimal version** (if properties not needed):
-```yaml
----
-tags: moc, [topic]
----
+> One-line description
 ```
 
 ---
@@ -139,12 +122,6 @@ def example():
     pass
 ```
 
-### Annotations
-```python
-def example():
-    pass  # $1 important note
-```
-
 ---
 
 ## Callouts
@@ -159,9 +136,6 @@ def example():
 
 > [!tip] 提示
 > 这是提示内容
-
-> [!danger] 危险
-> 这是危险内容
 ```
 
 ### Collapsible
@@ -196,28 +170,6 @@ def example():
 | A1   |   B1   |    C1 |
 | A2   |   B2   |    C2 |
 ```
-
-### Wide Table
-```markdown
-| Feature | Description | Status |
-| ------- | ----------- | ------ |
-|         |             |        |
-^ Wide table header (for long tables)
-```
-
----
-
-## MOC Diagram Format
-
-For architecture diagrams, use Mermaid:
-
-```mermaid
-graph TD
-    A[Start] --> B[Process]
-    B --> C[End]
-```
-
-**Placement**: Put after H2 section header
 
 ---
 

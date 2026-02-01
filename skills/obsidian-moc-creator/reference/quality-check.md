@@ -4,21 +4,17 @@
 - [Quality Check](#quality-check)
   - [Contents](#contents)
   - [Pre-generation Check](#pre-generation-check)
+  - [Depth Validation](#depth-validation)
   - [Content Check](#content-check)
     - [Relevance](#relevance)
     - [Structure](#structure)
     - [Depth](#depth)
   - [Format Check](#format-check)
     - [Wikilinks](#wikilinks)
-    - [Callouts](#callouts)
-    - [Lists](#lists)
+    - [Frontmatter](#frontmatter)
     - [Code Blocks](#code-blocks)
   - [Completeness Check](#completeness-check)
-    - [Required Sections](#required-sections)
-    - [Missing Items](#missing-items)
-    - [Balance](#balance)
   - [Validation Checklist](#validation-checklist)
-  - [Quick Validation Commands](#quick-validation-commands)
   - [Quality Scores](#quality-scores)
 
 ---
@@ -28,10 +24,20 @@
 Before generating MOC, verify:
 
 - [ ] **Intent clear**: User's goal is understood
-- [ ] **Scenario identified**: learning / interview / project
-- [ ] **Depth level confirmed**: beginner / intermediate / advanced
+- [ ] **Depth level confirmed**: beginner / intermediate / advanced / interview
 - [ ] **Topic scope defined**: Boundaries of the MOC
 - [ ] **Existing notes checked**: Links to existing Obsidian notes
+
+---
+
+## Depth Validation
+
+| Depth            | Expected Sections                                         |
+| ---------------- | --------------------------------------------------------- |
+| **beginner**     | Overview, Core Concepts, Getting Started, Basic Resources |
+| **intermediate** | All standard modules                                      |
+| **advanced**     | All standard + Best Practices, Source Analysis            |
+| **interview**    | All standard + Interview Q&A, Strategy                    |
 
 ---
 
@@ -53,6 +59,7 @@ Verify MOC content quality:
 - [ ] Key concepts are explained, not just listed
 - [ ] Examples provided for important concepts
 - [ ] Links to deeper resources for advanced users
+- [ ] Interview mode: Covers common interview questions
 
 ---
 
@@ -65,15 +72,18 @@ Check Obsidian formatting:
 - [ ] No broken links
 - [ ] Links point to likely existing pages
 
-### Callouts
-- [ ] Use `> [!info]` for notes
-- [ ] Use `> [!warning]` for cautions
-- [ ] Use `> [!tip]` for tips
-
-### Lists
-- [ ] Consistent bullet style
-- [ ] Proper indentation
-- [ ] Meaningful list items
+### Frontmatter
+```yaml
+---
+title: [Title]
+tags:
+  - moc
+  - [topic]
+type: moc
+created: [YYYY-MM-DD]
+updated: [YYYY-MM-DD]
+---
+```
 
 ### Code Blocks
 - [ ] Language specified: `\`\`\`python`
@@ -84,30 +94,15 @@ Check Obsidian formatting:
 
 ## Completeness Check
 
-Ensure MOC is comprehensive:
-
-### Required Sections
-| Scenario  | Required Sections                            |
-| --------- | -------------------------------------------- |
-| Learning  | Overview, Core Concepts, Practice, Resources |
-| Interview | Basics, Advanced, Projects, Coding           |
-| Project   | Overview, Architecture, Pitfalls, Ops        |
-
-### Missing Items
-- [ ] No placeholder text like "TODO"
-- [ ] No "内容待补充" or similar
-- [ ] All links have targets
-
-### Balance
-- [ ] No section is overly thin
-- [ ] No section is excessively detailed
-- [ ] Proportions make sense for the topic
+- [ ] No placeholder text like "TODO" or "内容待补充"
+- [ ] All wikilinks have meaningful targets
+- [ ] External links are valid URLs
+- [ ] No section is overly thin or excessively detailed
+- [ ] Consistent terminology throughout
 
 ---
 
 ## Validation Checklist
-
-Copy and complete this checklist before finalizing:
 
 ```
 MOC Quality Validation:
@@ -123,21 +118,6 @@ MOC Quality Validation:
 - [ ] Consistent terminology
 - [ ] Obsidian syntax is correct
 - [ ] File name matches topic (kebab-case)
-```
-
----
-
-## Quick Validation Commands
-
-```bash
-# Check for common issues
-grep -n "TODO\|待补充\|TODO" obsidian-moc.md
-
-# Verify wikilinks (basic)
-grep -o '\[\[.*\]\]' obsidian-moc.md | wc -l
-
-# Count sections
-grep -n "^## " obsidian-moc.md | wc -l
 ```
 
 ---
