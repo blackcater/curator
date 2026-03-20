@@ -1,6 +1,6 @@
 ---
-name: create-moc
-description: Create structured MOC (Map of Content) documents for programmers. Use when users want to organize knowledge, prepare for interviews, or learn new technologies. Triggers: "MOC", "内容地图", "知识整理", "学习路线", "面试准备".
+name: obsidian-moc-creator
+description: Create structured MOC (Map of Content) documents for programmers. Use when users want to organize knowledge, prepare for interviews, or learn new technologies.
 ---
 
 # Obsidian MOC Creator
